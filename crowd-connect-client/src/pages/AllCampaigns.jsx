@@ -1,20 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { authContext } from '../provider/AuthProvider';
 import { Link } from 'react-router-dom';
-import { Tooltip } from 'react-tooltip';
 import { Typewriter } from 'react-simple-typewriter';
 import { Fade } from 'react-awesome-reveal';
+import Loader from '../components/Loader';
 
 
 
 
 const AllCampaigns = () => {
-    const { user, loader } = useContext(authContext)
     const [campaigns, setCampaign] = useState([])
     const [AscSort, setAscSort] = useState(false)
     const [DscSort, setDscSort] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
-    const date = new Date()
+    const [loading, setLoader] = useState(true)
 
 
     useEffect(() => {
@@ -22,6 +21,7 @@ const AllCampaigns = () => {
             .then(res => res.json())
             .then(data => {
                 setCampaign(data)
+                setLoader(false)
             })
     }, [AscSort, DscSort])
 
@@ -53,8 +53,8 @@ const AllCampaigns = () => {
                         loop={0}
                         cursor
                         cursorStyle="|"
-                        typeSpeed={70}
-                        deleteSpeed={50}
+                        typeSpeed={100}
+                        deleteSpeed={100}
                         delaySpeed={1000}>
                     </Typewriter>
                 </h2>
@@ -114,32 +114,36 @@ const AllCampaigns = () => {
                     </div>
                 </Fade>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                {campaigns.map((campaign) => (
-                    <div
-                        data-tooltip-id="my-tooltip"
-                        data-tooltip-content={`Deadline: ${campaign.deadline}`}
-                        key={campaign._id}
-                        className="card bg-base-200 z-0">
-                        <figure>
-                            <img
-                                className='h-64 w-auto'
-                                src={campaign.image}
-                                alt="Campaign" />
-                        </figure>
-                        <div className="card-body z-0 space-y-0 flex-none">
-                            <h2 className="card-title max-h-9">{campaign.title}</h2>
-                            <p>{campaign.description.slice(0, 40)}...</p>
-                            <p>Deadline: {new Date(campaign.deadline).toLocaleDateString()}</p>
-                            <p>Minimum Donation: {campaign.minimumDonation}$</p>
-                            <div className="card-actions justify-end">
-                                <Link to={`/campaigns/${campaign._id}`} className="btn btn-primary">See more</Link>
+            {loading ?
+                <Loader></Loader>
+                :
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                    {campaigns.map((campaign) => (
+                        <div
+                            data-tooltip-id="my-tooltip"
+                            data-tooltip-content={`Deadline: ${campaign.deadline}`}
+                            key={campaign._id}
+                            className="card bg-base-200 z-0">
+                            <figure>
+                                <img
+                                    className='h-64 w-auto'
+                                    src={campaign.image}
+                                    alt="Campaign" />
+                            </figure>
+                            <div className="card-body z-0 space-y-0 flex-none">
+                                <h2 className="card-title max-h-9">{campaign.title}</h2>
+                                <p>{campaign.description.slice(0, 40)}...</p>
+                                <p>Deadline: {new Date(campaign.deadline).toLocaleDateString()}</p>
+                                <p>Minimum Donation: {campaign.minimumDonation}$</p>
+                                <div className="card-actions justify-end">
+                                    <Link to={`/campaigns/${campaign._id}`} className="btn btn-primary">See more</Link>
+                                </div>
                             </div>
-                        </div>
 
-                    </div>
-                ))}
-            </div>
+                        </div>
+                    ))}
+                </div>
+            }
         </div>
     );
 };
