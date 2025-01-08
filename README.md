@@ -1,6 +1,6 @@
 <a href="https://crowd-connect-e444d.web.app/"><h1>Crowd Connect</h1></a>
 
-<h3>Purpose</h3>
+# Help Together 🤝
 <p>CrowdConnect is a modern crowdfunding platform designed to help individuals, startups, businesses, and creatives bring their ideas and causes to life. The platform connects campaign creators with a supportive community of donors, making it easy to raise funds for personal needs, creative projects, and entrepreneurial ventures.</p>
 
 <h2>Live URL:<a href="https://crowd-connect-e444d.web.app/"><h3>https://crowd-connect-e444d.web.app/</h3></a></h2>
@@ -24,3 +24,69 @@
     </p></li>
     
 </ol>
+
+## 🛠️ Technologies Used  
+
+### Frontend:  
+- **React**: Dynamic UI rendering.  
+- **Tailwind CSS**: Responsive and modern styling.  
+
+### Backend:  
+- **Node.js** and **Express.js**: Backend framework for API creation.  
+- **MongoDB**: NoSQL database for data storage.  
+- **Prisma ORM**: For database interaction.  
+
+### Others:  
+- **Axios**: For HTTP requests. 
+- **Firebase**: For user authentication and hosting.  
+
+---
+
+## ✨ Main Features  
+- **Campaign Creation**: Users can create campaigns with details such as title, description, and funding goals.  
+- **Secure Donations**: Supporters can contribute funds securely through the platform.  
+- **Real-Time Updates**: Campaign creators can post updates to engage with donors.  
+- **User Authentication**: Login and sign-up functionality with Firebase.  
+- **Responsive Design**: Optimized for both desktop and mobile devices.  
+
+---
+
+
+## 📦 Dependencies
+- **axios**: Promise-based HTTP client for making API requests.  
+- **firebase**: For user authentication, hosting, and other Firebase services.  
+- **gsap**: High-performance animation library for web applications.  
+- **localforage**: Offline storage utility for managing data locally.  
+- **match-sorter**: Library for filtering and sorting data.  
+- **react**: JavaScript library for building user interfaces.  
+- **react-awesome-reveal**: For adding animations to React components.  
+- **react-dom**: React library for DOM rendering.  
+- **react-icons**: Collection of popular SVG icons for React.  
+- **react-lottie**: React wrapper for Lottie animations.  
+- **react-router-dom**: Declarative routing for React.  
+- **react-simple-typewriter**: Typewriter effect for React components.  
+- **react-toastify**: For creating toast notifications in React.  
+- **react-tooltip**: Customizable tooltips for React.  
+- **sort-by**: Sorting utility for JavaScript objects.  
+- **sweetalert2**: Customizable and beautiful popups.  
+- **swiper**: Modern touch slider library.
+
+To see the full list of dependencies, check the [package.json](./package.json) file. 
+
+
+## 🚀 How to Run Locally  
+
+Follow these steps to run the project on your local machine:  
+
+1. **Clone the Repository**:  
+   ```bash  
+   git clone https://github.com/nafiz678/crowdfunding-website.git  
+   cd crowdfunding-website 
+   Backend:
+   cd server
+   npm install
+
+   FrontEnd:
+   cd client
+   npm install
+   npm run dev
