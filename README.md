@@ -87,7 +87,7 @@ Follow these steps to run the project on your local machine:
 2. Install Dependencies:
 - Frontend
     ```bash
-    cd server
+    cd client
     npm install
 
 - Backend
@@ -105,4 +105,16 @@ Follow these steps to run the project on your local machine:
     # Client  
     VITE_FIREBASE_API_KEY=your_firebase_api_key
 
-4. 
+4. Run the Development Servers:
+- Start the backend:
+    ```bash
+    cd server
+    node index.js
+
+- Start the frontend:
+    ```bash
+    cd server
+    npm run dev
+
+5. Access the Application:
+Open your browser and navigate to http://localhost:5000.
