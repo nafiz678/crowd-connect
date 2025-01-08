@@ -85,14 +85,14 @@ Follow these steps to run the project on your local machine:
 
 
 2. Install Dependencies:
-        ###Frontend
+- Frontend
     ```bash
     bash
     Copy code
     cd server
     npm install
 
-    ###Backend
+- Backend
     ```bash
     bash
     Copy code
@@ -109,4 +109,4 @@ Follow these steps to run the project on your local machine:
     # Client  
     VITE_FIREBASE_API_KEY=your_firebase_api_key
 
-3. 
+4. 
