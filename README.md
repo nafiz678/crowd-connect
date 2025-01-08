@@ -1,6 +1,6 @@
 <a href="https://crowd-connect-e444d.web.app/"><h1>Crowd Connect</h1></a>
 
-# Help Together 🤝
+## Help Together 🤝
 <p>CrowdConnect is a modern crowdfunding platform designed to help individuals, startups, businesses, and creatives bring their ideas and causes to life. The platform connects campaign creators with a supportive community of donors, making it easy to raise funds for personal needs, creative projects, and entrepreneurial ventures.</p>
 
 <h2>Live URL:<a href="https://crowd-connect-e444d.web.app/"><h3>https://crowd-connect-e444d.web.app/</h3></a></h2>
