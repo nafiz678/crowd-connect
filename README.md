@@ -81,12 +81,32 @@ Follow these steps to run the project on your local machine:
 1. **Clone the Repository**:  
    ```bash  
    git clone https://github.com/nafiz678/crowdfunding-website.git  
-   cd crowdfunding-website 
-   Backend:
-   cd server
-   npm install
+   cd crowdfunding-website
 
-   FrontEnd:
-   cd client
-   npm install
-   npm run dev
+
+2. Install Dependencies:
+        ###Frontend
+  ```bash
+    bash
+    Copy code
+    cd server
+    npm install
+
+    ###Backend
+    ```bash
+    bash
+    Copy code
+    cd server
+    npm install
+
+
+3. Set Up Environment Variables:
+    ```bash
+    env
+    Copy code
+    # Server  
+    MONGO_URI=your_mongodb_connection_string
+    # Client  
+    VITE_FIREBASE_API_KEY=your_firebase_api_key
+
+3. 
