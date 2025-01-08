@@ -116,5 +116,5 @@ Follow these steps to run the project on your local machine:
     cd server
     npm run dev
 
-5. Access the Application:
+5. Access the Application: </br>
 Open your browser and navigate to http://localhost:5000.
