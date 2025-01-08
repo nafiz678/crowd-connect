@@ -34,7 +34,7 @@
 ### Backend:  
 - **Node.js** and **Express.js**: Backend framework for API creation.  
 - **MongoDB**: NoSQL database for data storage.  
-- **Prisma ORM**: For database interaction.  
+- **Express Js**: For database interaction.  
 
 ### Others:  
 - **Axios**: For HTTP requests. 
